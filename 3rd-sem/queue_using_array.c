@@ -1,7 +1,7 @@
 //To implement queue using array.
 #include <stdio.h>
 
-void enqueue(int data);
+void enqueue();
 void dequeue();
 void front();
 void rear();
@@ -10,18 +10,41 @@ int Array[10];
 
 int main()
 {
-    enqueue(10);
-    enqueue(96);
-    enqueue(63);
-    dequeue();
-    enqueue(15);
-    dequeue();
-    enqueue(26);
+    int ch;
+    do
+    {
+        printf("Enter choice 1-Enqueue,2-Dequeue,3-front,4-Rear,5-Exit:");
+        scanf("%d", &ch);
+        switch (ch)
+        {
+        case 1:
+            enqueue();
+            break;
+        case 2:
+            dequeue();
+            break;
+        case 3:
+            front();
+            break;
+        case 4:
+            rear();
+            break;
+        case 5:
+            printf("Endind the program");
+            return 1;
+        default:
+            printf("Enter valid Choice");
+        }
+    } while (ch != 4);
+
     return 0;
 }
 
-void enqueue(int data)
+void enqueue()
 {
+    int data;
+    printf("Ënter the data:");
+    scanf("%d",&data);
     if (r == sizeof(Array))
     {
         printf("\nOverflow");
@@ -41,7 +64,7 @@ void dequeue()
     }
     else
     {
-        printf("\nElement dequeued:%d", Array[f]);
+        printf("\nElement dequeued:%d\n", Array[f]);
         Array[f] = 0;
         f++;
     }
@@ -55,7 +78,7 @@ void front()
     }
     else
     {
-        printf("\nTop of the Stack is :%d", Array[r]);
+        printf("\nTop of the Stack is :%d\n", Array[r]);
     }
 }
 
@@ -66,7 +89,7 @@ void rear(){
     }
     else
     {
-        printf("\nTop of the Stack is :%d", Array[r]);
+        printf("\nRear of the Stack is :%d\n", Array[r]);
     }
 }
 

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void push(int data);
+void push();
 void pop();
 void tos();
 int rear = -1;
@@ -8,21 +8,38 @@ int Array[10];
 
 int main()
 {
-    push(10);
-    push(96);
-    push(63);
-    tos();
-    pop();
-    tos();
-    push(15);
-    pop();
-    push(26);
-    tos();
+    int ch;
+    do
+    {
+        printf("Enter choice 1-push,2-pop,3-tos,4-Exit :");
+        scanf("%d", &ch);
+        switch (ch)
+        {
+        case 1:
+            push();
+            break;
+        case 2:
+            pop();
+            break;
+        case 3:
+            tos();
+            break;
+        case 4:
+            printf("Endind the program");
+            return 1;
+        default:
+            printf("Enter valid Choice\n");
+        }
+    } while (ch != 4);
+
     return 0;
 }
 
-void push(int data)
+void push()
 {
+    int data;
+    printf("Enter the data :");
+    scanf("%d",&data);
     if (rear == sizeof(Array))
     {
         printf("\nOverflow");
@@ -42,7 +59,7 @@ void pop()
     }
     else
     {
-        printf("\nElement popped:%d", Array[rear]);
+        printf("\nElement popped:%d\n", Array[rear]);
         Array[rear] = 0;
         rear--;
     }
