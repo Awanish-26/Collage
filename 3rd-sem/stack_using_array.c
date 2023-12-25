@@ -73,7 +73,7 @@ void tos()
     }
     else
     {
-        printf("\nTop of the Stack is :%d", Array[rear]);
+        printf("\nTop of the Stack is :%d\n", Array[rear]);
     }
 }
 

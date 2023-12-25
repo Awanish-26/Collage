@@ -43,7 +43,7 @@ int main()
 void enqueue()
 {
     int data;
-    printf("Ënter the data:");
+    printf("Enter the data:");
     scanf("%d",&data);
     if (r == sizeof(Array))
     {

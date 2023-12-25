@@ -4,7 +4,7 @@
 void push();
 void pop();
 void peek();
-void print();
+// void print();
 
 typedef struct node
 {
@@ -20,7 +20,7 @@ int main()
 {
     do
     {
-        printf("\nEnter your choice \n 1.insert \n 2.pop \n 3.peek \n 4.print \n 5.exit \n");
+        printf("\nEnter your choice \n 1.push \n 2.pop \n 3.peek \n 4.exit \n");
         scanf("%d", &ch);
         switch (ch)
         {
@@ -33,10 +33,10 @@ int main()
         case 3:
             peek();
             break;
+        // case 4:
+        //     print();
+        //     break;
         case 4:
-            print();
-            break;
-        case 5:
             printf("Ending Program ");
             exit(0);
         default:
@@ -96,14 +96,14 @@ void peek()
     printf("\nTop :%d", head->data);
 }
 
-void print()
-{
-    temp = head;
-    printf("\nElements in stack :");
-    while (temp != NULL)
-    {
-        printf("%d,", temp->data);
-        temp = temp->next;
-    }
-    printf("\n");
-}
+// void print()
+// {
+//     temp = head;
+//     printf("\nElements in stack :");
+//     while (temp != NULL)
+//     {
+//         printf("%d,", temp->data);
+//         temp = temp->next;
+//     }
+//     printf("\n");
+// }
