@@ -40,13 +40,38 @@ int main()
     return 0;
 }
 
+void isEmpty()
+{
+}
+void isFull()
+{
+}
 void enqueue()
 {
     int data;
     printf("Enter the data:");
     scanf("%d", &data);
-    if (r == -1 && r == f)
+    if (r == sizeof(Array) && r == f + 1)
     {
+        printf("\nOverflow\n");
+    }
+    else
+    {
+        int i = 0;
+        if (r == sizeof(Array) && f > -1)
+        {
+            while (Array[i] != 0)
+            {
+                i++;
+            }
+            r = Array[i];
+            Array[r] = data;
+        }
+        else
+        {
+            r++;
+            Array[r] = data;
+        }
     }
 }
 
