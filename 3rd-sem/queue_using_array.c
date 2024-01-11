@@ -1,4 +1,4 @@
-//To implement queue using array.
+// To implement queue using array.
 #include <stdio.h>
 
 void enqueue();
@@ -35,7 +35,7 @@ int main()
         default:
             printf("Enter valid Choice");
         }
-    } while (ch != 4);
+    } while (ch != 5);
 
     return 0;
 }
@@ -44,7 +44,7 @@ void enqueue()
 {
     int data;
     printf("Enter the data:");
-    scanf("%d",&data);
+    scanf("%d", &data);
     if (r == sizeof(Array))
     {
         printf("\nOverflow");
@@ -82,14 +82,15 @@ void front()
     }
 }
 
-void rear(){
+void rear()
+{
     if (r == -1)
     {
         printf("\nUnderflow");
     }
     else
     {
-        printf("\nRear of the Stack is :%d\n", Array[r]);
+        printf("\nRear of the Stack is :%d\n", Array[f]);
     }
 }
 
