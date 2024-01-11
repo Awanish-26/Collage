@@ -9,32 +9,9 @@ typedef struct node
     struct node *right;
 } S;
 
-S *CreateNode(int d);
-S *insert(S *root, int d);
-void traverse(S *root);
-
-int main()
-{
-    S *root = NULL;
-    int size, d;
-    printf("Enter the number of nodes you want: ");
-    scanf("%d", &size);
-    for (int i = 0; i < size; i++)
-    {
-        printf("Enter the data: ");
-        scanf("%d", &d);
-        root = insert(root, d);
-    }
-    printf("Your BST is:\n");
-    traverse(root);
-    printf("\nThanks for executing my code :-)\n");
-    return 0;
-}
-
 S *CreateNode(int d)
 {
-    S *n;
-    n = (S *)malloc(sizeof(S));
+    S *n = (S *)malloc(sizeof(S));
     if (n == NULL)
         printf("Memory not created\n");
     else
@@ -76,9 +53,25 @@ void traverse(S *root)
 {
     if (root != NULL)
     {
-
         traverse(root->left);
         printf("%d ", root->data);
         traverse(root->right);
     }
+}
+
+int main()
+{
+    S *root = NULL;
+    int size, d;
+    printf("Enter the number of nodes you want: ");
+    scanf("%d", &size);
+    for (int i = 0; i < size; i++)
+    {
+        printf("Enter the data: ");
+        scanf("%d", &d);
+        root = insert(root, d);
+    }
+    printf("Your BST is:");
+    traverse(root);
+    return 0;
 }
