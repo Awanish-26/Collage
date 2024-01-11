@@ -1,3 +1,4 @@
+// To implement binary search tree using linked list.
 #include <stdio.h>
 #include <stdlib.h>
 
