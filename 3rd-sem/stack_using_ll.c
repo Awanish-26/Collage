@@ -18,9 +18,10 @@ S *temp = NULL;
 
 int main()
 {
+    printf("\n 1.push \t 2.pop \n 3.peek \t 4.exit \n");
     do
     {
-        printf("\nEnter your choice \n 1.push \n 2.pop \n 3.peek \n 4.exit \n");
+        printf("Enter your choice:");
         scanf("%d", &ch);
         switch (ch)
         {
@@ -42,8 +43,8 @@ int main()
         default:
             printf("Enter valid option");
         }
-    } while (ch != 5);
-    printf("Thanks for executing my code((*_*))\n");
+    } while (ch != 4);
+    printf("\nThanks for executing my code((*_*))\n");
     return 0;
 }
 
@@ -85,7 +86,7 @@ void pop()
     else
     {
         head = temp->next;
-        printf("\nElement poped out:%d", temp->data);
+        printf("\nElement poped out:%d \n", temp->data);
         temp = NULL;
         free(temp);
     }
@@ -93,7 +94,7 @@ void pop()
 
 void peek()
 {
-    printf("\nTop :%d", head->data);
+    printf("\nTop :%d \n", head->data);
 }
 
 // void print()
