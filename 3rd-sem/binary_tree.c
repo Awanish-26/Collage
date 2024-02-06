@@ -172,9 +172,8 @@ int main()
     printf("Inorder traversal \n");
     inorderTraversal(root);
 
-    //     printf("\nPreorder traversal \n");
-    //     preorderTraversal(root);
-
-    //     printf("\nPostorder traversal \n");
-    //     postorderTraversal(root);
+    printf("\nPreorder traversal \n");
+    preorderTraversal(root);
+    printf("\nPostorder traversal \n");
+    postorderTraversal(root);
 }

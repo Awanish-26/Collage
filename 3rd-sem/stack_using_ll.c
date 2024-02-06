@@ -39,12 +39,12 @@ int main()
         //     break;
         case 4:
             printf("Ending Program ");
-            exit(0);
+            break;
         default:
             printf("Enter valid option");
         }
     } while (ch != 4);
-    printf("\nThanks for executing my code((*_*))\n");
+    printf("\nThanks for executing my code (*◡*)\n");
     return 0;
 }
 

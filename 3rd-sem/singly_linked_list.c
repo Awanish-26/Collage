@@ -139,8 +139,7 @@ void insert_in_btw()
 // Insertion at end
 void insert_at_end()
 {
-    S *ptr = NULL;
-    ptr = (S *)malloc(sizeof(S));
+    S *ptr = (S *)malloc(sizeof(S));
     if (ptr == NULL)
         printf("Memory not created\n");
     else
