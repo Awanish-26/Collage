@@ -1,17 +1,19 @@
 #include <stdio.h>
 
+// different operation of stack
 void push();
 void pop();
 void tos();
 int rear = -1;
-int Array[10];
+int Array[1];
 
+// main function
 int main()
 {
     int ch;
     do
     {
-        printf("Enter choice 1-push,2-pop,3-tos,4-Exit :");
+        printf("Enter choice 1-push,2-pop,3-tos,4-Print,5-Exit :");
         scanf("%d", &ch);
         switch (ch)
         {
@@ -25,22 +27,25 @@ int main()
             tos();
             break;
         case 4:
+            print_stack();
+        case 5:
             printf("Endind the program");
             return 1;
         default:
             printf("Enter valid Choice\n");
         }
-    } while (ch != 4);
+    } while (ch != 5);
 
     return 0;
 }
 
+// insert operation in stack
 void push()
 {
     int data;
     printf("Enter the data :");
-    scanf("%d",&data);
-    if (rear == sizeof(Array))
+    scanf("%d", &data);
+    if (rear == sizeof(Array) / sizeof(Array[0]))
     {
         printf("\nOverflow");
     }
@@ -51,6 +56,7 @@ void push()
     }
 }
 
+// delete element from stack
 void pop()
 {
     if (rear == -1)
@@ -65,6 +71,7 @@ void pop()
     }
 }
 
+// shows the top element of stack
 void tos()
 {
     if (rear == -1)
@@ -78,13 +85,13 @@ void tos()
 }
 
 // To print the stack
-// void print_stack()
-// {
-//     for (int i = 10; i >= 0; i--)
-//     {
-//         if (Array[i] != 0)
-//         {
-//             printf("\n%d", Array[i]);
-//         }
-//     }
-// }
+void print_stack()
+{
+    for (int i = 10; i >= 0; i--)
+    {
+        if (Array[i] != 0)
+        {
+            printf("\n%d", Array[i]);
+        }
+    }
+}
