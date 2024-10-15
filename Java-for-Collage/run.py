@@ -1,14 +1,14 @@
 import os
 import shutil
 
-folder_path = r"C:\All-Program\Java-for-Collage"
+folder_path = r"D:\All-Program\Collage\Java-for-Collage"
 
 for filename in os.listdir(folder_path):
     if filename.endswith(".class"):
         file_path = os.path.join(folder_path, filename)
         try:
             os.remove(file_path)
-            # print(f"Deleted: {file_path}")
+            print(f"Deleted: {file_path}")
         except OSError as e:
             print(f"Error deleting {file_path}: {e}")
 

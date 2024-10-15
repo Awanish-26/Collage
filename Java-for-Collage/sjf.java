@@ -7,7 +7,7 @@
 
 import java.util.Scanner;
 
-public class SJF {
+public class sjf {
     public static void main(String args[])
     {
         Scanner sc = new Scanner(System.in);

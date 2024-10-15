@@ -41,7 +41,7 @@ void AvgwaitingTime(int processes[], int n, int wt[])
     {
         total_wt += wt[i];
     }
-    printf("Average Waiting Time = %.2f\n", (float)total_wt / n);
+    printf("Average Waiting Time = %.2f\n" , (float)total_wt / n);
 }
 
 // Function to calculate average turnaround time
@@ -58,10 +58,8 @@ void AverageTAT(int processes[], int n, int tat[])
 int main()
 {
     int n;
-
     printf("Enter the number of processes: ");
     scanf("%d", &n);
-
     int processes[n], bt[n], at[n], wt[n], tat[n];
 
     // Input burst times and arrival times
