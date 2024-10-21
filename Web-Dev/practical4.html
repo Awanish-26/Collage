@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map Example</title>
+</head>
+<body>
+
+<h2>Clickable Image Map</h2>
+<p>Click on different areas of the image below to go to different links:</p>
+
+<!-- Embedding an image map -->
+<img src="world-map.jpg" alt="World Map" usemap="#worldmap" width="800" height="400">
+
+<!-- Defining the map with clickable areas -->
+<map name="worldmap">
+    <!-- Define a clickable area for North America -->
+    <area shape="rect" coords="100,50,200,150" alt="North America" href="https://en.wikipedia.org/wiki/North_America">
+
+    <!-- Define a clickable area for South America -->
+    <area shape="rect" coords="150,200,250,350" alt="South America" href="https://en.wikipedia.org/wiki/South_America">
+
+    <!-- Define a clickable area for Europe -->
+    <area shape="rect" coords="400,50,500,150" alt="Europe" href="https://en.wikipedia.org/wiki/Europe">
+
+    <!-- Define a clickable area for Africa -->
+    <area shape="rect" coords="350,200,450,350" alt="Africa" href="https://en.wikipedia.org/wiki/Africa">
+</map>
+
+</body>
+</html>

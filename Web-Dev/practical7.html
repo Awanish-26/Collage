@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascading Style Sheets Example</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+    <style>
+        /* Internal CSS */
+        h2 {
+            color: green;
+            text-align: center;
+        }
+        .internal-style {
+            background-color: lightyellow;
+            padding: 10px;
+            border: 2px solid orange;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="color: blue; text-align: center;">Cascading Style Sheets (CSS) Types</h1> <!-- Inline CSS -->
+
+<div class="internal-style">
+    <h2>Internal CSS Example</h2>
+    <p>This paragraph uses internal CSS for styling. The background is light yellow, and the text is styled using the internal CSS rules defined in the &lt;style&gt; section of this document.</p>
+</div>
+
+<div>
+    <h2>External CSS Example</h2>
+    <p>This paragraph uses external CSS for styling. The styles are defined in a separate CSS file called <code>styles.css</code>. The file should contain styles that apply to this paragraph.</p>
+</div>
+
+</body>
+</html>

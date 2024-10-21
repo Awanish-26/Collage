@@ -20,7 +20,7 @@ int main()
 {
     //Input no of processed
     int  n;
-    printf("Enter Total Number of Processes For Round Robin:");
+    printf("Enter Total Number of Processes for Round Robin:");
     scanf("%d", &n);
     int wt = 0, tat = 0, at[n], bt[n], temp_bt[n];
     int x = n;

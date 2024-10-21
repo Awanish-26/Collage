@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotspot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        img {
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+    <script>
+        function showAlert(continent) {
+            alert("You clicked on " + continent);
+        }
+    </script>
+</head>
+<body>
+
+<h2>Clickable Hot Spots on World Map</h2>
+<p>Click on different regions of the map to see an alert:</p>
+
+<!-- Image with hot spots -->
+<img src="world-map.jpg" alt="World Map" usemap="#worldmap" width="800px">
+
+<!-- Defining the image map -->
+<map name="worldmap">
+    <area shape="rect" coords="100,50,200,150" alt="North America" onclick="showAlert('North America')">
+    <area shape="rect" coords="150,200,250,350" alt="South America" onclick="showAlert('South America')">
+    <area shape="rect" coords="300,50,500,150" alt="Europe" onclick="showAlert('Europe')">
+    <area shape="rect" coords="300,200,400,300" alt="Africa" onclick="showAlert('Africa')">
+</map>
+
+</body>
+</html>

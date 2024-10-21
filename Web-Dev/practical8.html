@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Record Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border:4px solid rebeccapurple;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"], input[type="date"] {
+            width: 96%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 3px solid #888888;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            border: 2px solid blueviolet;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        .error {
+            color: red;
+            margin: 5px 0;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const email = document.getElementById('email').value;
+            const enrollmentDate = document.getElementById('enrollmentDate').value;
+            let valid = true;
+
+            // Clear previous error messages
+            document.querySelectorAll('.error').forEach(el => el.textContent = '');
+
+            // Name validation
+            if (name === '') {
+                document.getElementById('nameError').textContent = 'Name is required.';
+                valid = false;
+            }
+
+            // Age validation
+            if (age === '' || age < 1 || age > 120) {
+                document.getElementById('ageError').textContent = 'Please enter a valid age (1-120).';
+                valid = false;
+            }
+
+            // Email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').textContent = 'Please enter a valid email.';
+                valid = false;
+            }
+
+            // Enrollment date validation
+            if (enrollmentDate === '') {
+                document.getElementById('dateError').textContent = 'Enrollment date is required.';
+                valid = false;
+            }
+
+            return valid; // Return false to prevent form submission if invalid
+        }
+    </script>
+</head>
+<body>
+
+<h2 style="text-align: center;">Student Record Form</h2>
+<form onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <div id="nameError" class="error"></div>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age">
+    <div id="ageError" class="error"></div>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <div id="emailError" class="error"></div>
+
+    <label for="enrollmentDate">Enrollment Date:</label>
+    <input type="date" id="enrollmentDate" name="enrollmentDate">
+    <div id="dateError" class="error"></div>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
