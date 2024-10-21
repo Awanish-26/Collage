@@ -5,9 +5,9 @@
     possible amounts of all resources, then makes an “s-state” check to test for possible 
     activities, before deciding whether allocation should be allowed to continue
     Arguments -
-        1-Request
-        2-Max Allocation
-        3-Allocated Resourse
+        1 - Request
+        2 - Max Allocation
+        3 - Allocated Resourse
     Return - 
         1 - Safe Sequence
 */
@@ -50,6 +50,7 @@ int main() {
         f[k] = 0;
     }
 
+    // Need Matrix 
     int need[n][m];
     for (i = 0; i < n; i++) {
         for (j = 0; j < m; j++) {
