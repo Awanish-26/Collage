@@ -1,4 +1,13 @@
-// Shoetest Job first is a cpu scheduling algorithm which has least waiting time 
+/*
+Objective - Implementation of Shortest job first Cpu scheduling algorithum
+Shoetest Job first is a cpu scheduling algorithm which has least waiting time 
+Arguments:
+    1-Arrival Time
+    2-Burst Time
+Returns:
+    1:Average Waiting Time
+    2:Average Turnaround TIme
+*/
 #include <stdio.h>
 
 // Function to sort processes by burst time (for SJF)
